@@ -31,15 +31,28 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-
+        it('has URL defined and it is not empty', function(){
+            for (let i = 0; i < allFeeds.length; i++){
+                expect(allFeeds[i].url).toBeDefined('url is not defined at index '+ i)
+                expect(allFeeds[i].url).not.toEqual('', 'url is empty at index ' + i);
+            }
+        })
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+        it('has name defined and it is not empty', function(){
+            for (let i = 0; i < allFeeds.length; i++){
+                expect(allFeeds[i].name).toBeDefined('name is not defined at index '+ i)
+                expect(allFeeds[i].name).not.toEqual(' ', 'name is empty at index ' + i);
+            }
+        })
     });
 
+    describe('The menu', function(){
 
+    
     /* TODO: Write a new test suite named "The menu" */
 
         /* TODO: Write a test that ensures the menu element is
@@ -47,12 +60,14 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+        
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+         })
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
